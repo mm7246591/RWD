@@ -1,0 +1,134 @@
+body {
+    height: 100vh;
+    background: url("https://www.motherboardexpress.com/cms/blog20200608084911233.jpg") center/cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+header {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 1200px;
+    max-height: 100px;
+    background-color: transparent;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+header>a {
+    height: 50px;
+    text-decoration: none;
+    font-size: 45px;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    font-style: italic;
+}
+
+header nav {
+    width: 35%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    width: 100px;
+}
+
+header nav ul li a {
+    width: 10%;
+    height: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    transition: .5s;
+    font-weight: 600;
+    font-style: italic;
+}
+
+header nav ul li a:hover {
+    color: black;
+    transform: translateY(-5px);
+}
+
+@media (max-width:1254px) {
+    header {
+        margin: 20px;
+    }
+    header nav {
+        width: 50%;
+    }
+}
+
+@media (max-width:902px) {
+    header nav {
+        width: 70%;
+    }
+}
+
+@media (max-width:658px) {
+    header {
+        justify-content: flex-start;
+    }
+    header nav ul {
+        display: none;
+    }
+    .active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        background-color: transparent;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        outline: 1px solid white;
+    }
+    header nav ul li {
+        width: auto;
+    }
+    header nav ul li a {
+        margin-left: 10px;
+        color: white;
+    }
+    header nav ul li a:hover {
+        color: black;
+        background-color: transparent;
+    }
+    .menu-toggle {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 22%;
+        right: 3%;
+        font-size: 30px;
+        background: url(./images/menu.png) no-repeat center/cover;
+        cursor: pointer;
+        text-align: center;
+    }
+    .close-toggle {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 22%;
+        right: 3%;
+        font-size: 30px;
+        background: url(./images/close.png) no-repeat center/cover;
+        cursor: pointer;
+        text-align: center;
+    }
+}
