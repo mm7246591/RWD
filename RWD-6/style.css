@@ -1,0 +1,215 @@
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: black;
+    z-index: 1;
+}
+
+header .logo {
+    position: relative;
+    left: 10%;
+    font-size: 35px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: white;
+    padding: 10px;
+    font-style: italic;
+}
+
+header nav {
+    position: relative;
+    right: 10%;
+    display: flex;
+}
+
+header a {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    transition: .3s;
+    margin: 0px 5px;
+}
+
+header a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.toggle {
+    display: none;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 30px;
+}
+
+section .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
+}
+
+.content h2 {
+    font-family: 'Allison', cursive;
+    font-size: 50px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.content p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 5px 30px 15px 0px;
+    font-weight: 500;
+}
+
+.content a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 20px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 50px;
+    transition: .3s;
+}
+
+.content a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+@media (max-width:900px) {
+    header nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        z-index: 2;
+        animation: fadeIn .3s ease-in;
+    }
+    @keyframes fadeIn {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+    header a {
+        font-size: 40px;
+        z-index: 2;
+    }
+    .toggle {
+        position: relative;
+        top: 0;
+        right: 5%;
+        display: block;
+        background: url("menu.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 60px;
+        height: 60px;
+        z-index: 2;
+    }
+    header.active .toggle {
+        position: relative;
+        top: 0;
+        right: 5%;
+        display: block;
+        background: url("close.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 60px;
+        height: 60px;
+        z-index: 2;
+    }
+    header.active nav {
+        display: flex;
+    }
+    section {
+        transform: translateY(12%);
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    section .content {
+        width: auto;
+    }
+    .content {
+        padding: 20px;
+    }
+    .content p {
+        margin: 0;
+    }
+    .content a {
+        margin: 10px;
+        margin-left: 0;
+    }
+    section img {
+        width: 500px;
+        height: 400px;
+        margin: 20px;
+        align-self: center;
+    }
+}
+
+@media (max-width:725px) {
+    section {
+        justify-content: flex-end;
+        height: auto;
+        padding: 30px 0 0;
+        margin: 0 30px 30px;
+    }
+    section img {
+        width: 400px;
+        height: 300px;
+        margin: auto;
+    }
+    .content {
+        padding: 0;
+        margin: 20px;
+    }
+}
+
+@media (max-width:542px) {
+    section img {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width:392px) {
+    section img {
+        width: 250px;
+        height: 150px;
+    }
+}
