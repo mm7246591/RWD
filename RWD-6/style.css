@@ -1,0 +1,97 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dcdcdc;
+}
+
+.container {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+}
+
+.card {
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+
+.card .action {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.action ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.action li {
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    list-style: none;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.action li:hover {
+    color: white;
+    background-color: #f00;
+}
+
+.pic {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s ease;
+}
+
+.pic img:hover {
+    transform: scale(1.5);
+}
+
+.pic img:hover .action li {
+    visibility: visible;
+}
+
+.content {
+    font-family: 'Poppins';
+    padding: 10px;
+}
+
+.content h3 {
+    font-weight: 500;
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.content .price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .price h2 {
+    font-weight: 500;
+    font-size: 20px;
+    color: red;
+    margin: 0;
+}
+
+.content .rate .fas {
+    color: rgb(221, 221, 4);
+}
